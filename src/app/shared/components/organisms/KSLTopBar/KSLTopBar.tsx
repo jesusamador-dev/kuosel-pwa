@@ -1,5 +1,5 @@
 import React from 'react';
-import KSLButtonWithIcon from '@/app/components/molecules/KSLButtonWithIcon/KSLButtonWithIcon';
+import KSLButtonWithIcon from '@/app/shared/components/molecules/KSLButtonWithIcon/KSLButtonWithIcon';
 
 export interface KSLTopBarProps {
   title: string;

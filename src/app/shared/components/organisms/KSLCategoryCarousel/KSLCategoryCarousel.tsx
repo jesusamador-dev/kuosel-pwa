@@ -1,6 +1,6 @@
 import React from 'react';
-import KSLCategoryCard, { KSLCategoryCardProps } from '@/app/components/molecules/KSLCategoryCard/KSLCategoryCard';
-import KSLButton from '@/app/components/atoms/KSLButton/KSLButton';
+import KSLCategoryCard, { KSLCategoryCardProps } from '@/app/shared/components/molecules/KSLCategoryCard/KSLCategoryCard';
+import KSLButton from '@/app/shared/components/atoms/KSLButton/KSLButton';
 
 export interface KSLCategoryCarouselProps {
   categories: KSLCategoryCardProps[];

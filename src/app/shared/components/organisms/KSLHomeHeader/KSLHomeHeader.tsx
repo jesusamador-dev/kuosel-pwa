@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'; 
-import KSLIcon from '@/app/components/atoms/KSLIcon/KSLIcon';
+import KSLIcon from '@/app/shared/components/atoms/KSLIcon/KSLIcon';
 
 const KSLHomeHeader: React.FC = () => {
   return (

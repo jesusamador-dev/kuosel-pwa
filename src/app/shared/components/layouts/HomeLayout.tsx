@@ -1,7 +1,7 @@
 import React from 'react';
-import KSLBottomNavBar from '@/app/components/organisms/KSLBottomNavBar/KSLBottomNavBar';
+import KSLBottomNavBar from '@/app/shared/components/organisms/KSLBottomNavBar/KSLBottomNavBar';
 import { links } from '@/app/constants/BottomNavBarLinks';
-import KSLHomeHeader from '@/app/components/organisms/KSLHomeHeader/KSLHomeHeader';
+import KSLHomeHeader from '@/app/shared/components/organisms/KSLHomeHeader/KSLHomeHeader';
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return (

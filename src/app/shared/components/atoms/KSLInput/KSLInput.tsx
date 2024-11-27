@@ -1,5 +1,5 @@
 import React from 'react';
-import KSLIcon from '@/app/components/atoms/KSLIcon/KSLIcon';
+import KSLIcon from '@/app/shared/components/atoms/KSLIcon/KSLIcon';
 
 export interface KSLInputProps {
   label: string;

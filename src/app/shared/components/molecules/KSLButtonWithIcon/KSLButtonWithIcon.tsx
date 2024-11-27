@@ -1,6 +1,6 @@
 import React from 'react';
-import KSLButton from '@/app/components/atoms/KSLButton/KSLButton';
-import KSLIcon from '@/app/components/atoms/KSLIcon/KSLIcon';
+import KSLButton from '@/app/shared/components/atoms/KSLButton/KSLButton';
+import KSLIcon from '@/app/shared/components/atoms/KSLIcon/KSLIcon';
 
 interface KSLButtonWithIconProps {
   text?: string;
