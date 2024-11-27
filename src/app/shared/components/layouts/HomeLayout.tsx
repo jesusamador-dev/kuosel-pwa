@@ -1,6 +1,6 @@
 import React from 'react';
 import KSLBottomNavBar from '@/app/shared/components/organisms/KSLBottomNavBar/KSLBottomNavBar';
-import { links } from '@/app/constants/BottomNavBarLinks';
+import { links } from '@/app/shared/constants/BottomNavBarLinks';
 import KSLHomeHeader from '@/app/shared/components/organisms/KSLHomeHeader/KSLHomeHeader';
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
