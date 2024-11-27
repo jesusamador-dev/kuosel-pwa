@@ -14,5 +14,6 @@ export default withPWA({
     register: true, // Registra automáticamente el service worker
     skipWaiting: true, // Fuerza al service worker a activarse inmediatamente
     disable: process.env.NODE_ENV === "development", // Desactiva PWA en desarrollo
+    customWorkerDir: "src/service-worker.js"
   },
 });
