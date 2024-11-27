@@ -9,8 +9,10 @@ const nextConfig: NextConfig = {
 
 export default withPWA({
   ...nextConfig,
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === "development",
+  pwa: {
+    dest: "public", // Ubicación donde se genera el service worker
+    register: true, // Registra automáticamente el service worker
+    skipWaiting: true, // Fuerza al service worker a activarse inmediatamente
+    disable: process.env.NODE_ENV === "development", // Desactiva PWA en desarrollo
+  },
 });
