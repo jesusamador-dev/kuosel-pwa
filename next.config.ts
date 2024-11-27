@@ -1,19 +1,17 @@
 import type { NextConfig } from "next";
-import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  images: {},
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ];
+  },
 };
 
-export default withPWA({
-  ...nextConfig,
-  pwa: {
-    dest: "public", // Ubicación donde se genera el service worker
-    register: true, // Registra automáticamente el service worker
-    skipWaiting: true, // Fuerza al service worker a activarse inmediatamente
-    disable: process.env.NODE_ENV === "development", // Desactiva PWA en desarrollo
-    customWorkerDir: "src/service-worker.js"
-  },
-});
+export default nextConfig;

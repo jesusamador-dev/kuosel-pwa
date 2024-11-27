@@ -1,6 +1,6 @@
 import React from 'react';
+import Link from 'next/link'; 
 import KSLIcon from '@/app/components/atoms/KSLIcon/KSLIcon';
-import { Link } from 'react-router-dom';
 
 const KSLHomeHeader: React.FC = () => {
   return (
@@ -12,8 +12,11 @@ const KSLHomeHeader: React.FC = () => {
         </div>
       </div>
       <div className="flex items-center">
-        <Link to="/notifications" className='bg-white rounded-full p-2 flex align-items-center justify-content-center'>
-          <KSLIcon name="notification" size="1.2rem"/>
+        <Link
+          href="/notifications"
+          className="bg-white rounded-full p-2 flex items-center justify-center"
+        >
+          <KSLIcon name="notification" size="1.2rem" />
         </Link>
       </div>
     </header>
