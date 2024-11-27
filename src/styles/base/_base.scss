@@ -1,0 +1,149 @@
+body {
+  @apply bg-grayPrincipal;
+  color: #2c2c2c;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+  overscroll-behavior-x: contain; /* Evita el rebote en el eje x */
+}
+
+.ksl-category-carousel {
+  scroll-snap-type: x mandatory; /* Para asegurar un scroll suave */
+  scroll-behavior: smooth; /* Para un desplazamiento más suave */
+}
+
+// KSLInput.scss
+.ksl-input {
+  @apply mb-4;
+
+  &__label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  &__wrapper {
+    @apply flex items-center border rounded-lg px-3 py-2 border-gray-300;
+
+    &--error {
+      @apply border-primary bg-primaryA10;
+    }
+  }
+
+  &__icon {
+    @apply text-primary mr-2;
+  }
+
+  &__field {
+    @apply flex-1 bg-transparent focus:outline-none;
+  }
+
+  &__error {
+    @apply text-primary text-xs mt-1;
+  }
+}
+
+// KSLPasswordInput.scss
+.ksl-password-input {
+  @apply mb-4;
+
+  &__label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  &__wrapper {
+    @apply flex items-center border rounded-lg px-3 py-2 border-gray-300;
+
+    &--error {
+      @apply border-primary bg-primaryA10;
+    }
+  }
+
+  &__icon {
+    @apply text-primary mr-2;
+  }
+
+  &__field {
+    @apply flex-1 bg-transparent focus:outline-none;
+  }
+
+  &__toggle {
+    @apply ml-2 bg-none border-none outline-none cursor-pointer;
+  }
+
+  &__toggle-icon {
+    @apply text-gray-400;
+  }
+
+  &__error {
+    @apply text-primary text-xs mt-1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.ksl-modal {
+  &__overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center;
+    backdrop-filter: blur(5px);
+  }
+
+  &__content {
+    @apply bg-white p-8 rounded-30px max-w-sm w-full text-center;
+    animation: zoomIn 0.3s ease-out forwards;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  &__content--closing {
+    animation: zoomOut 0.3s ease-in forwards;
+  }
+
+  &__icon {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    @apply text-2xl font-bold mb-2;
+    font-size: 1.75rem; // Ajuste para que el tamaño sea más cercano al diseño
+  }
+
+  &__message {
+    @apply text-gray-600 mb-6;
+    line-height: 1.5; // Mejorar la legibilidad del texto
+  }
+
+  &__button {
+    @apply button--primary w-full py-3;
+    border-radius: 12px; // Ajustar el borde redondeado para que coincida con el diseño
+    margin-bottom: 1rem; // Espaciado entre el botón y el borde inferior del modal
+  }
+
+  &__close {
+    @apply text-gray-500 text-sm;
+    cursor: pointer;
+  }
+}
