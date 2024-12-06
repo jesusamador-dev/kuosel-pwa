@@ -85,7 +85,7 @@ const SignUpForm: React.FC = () => {
         />
       </div>
       <div className="flex justify-center">
-        <KSLButton className="button--primary" type="submit">
+        <KSLButton className="button--primary button--full-width" type="submit">
           Registrarme
         </KSLButton>
       </div>

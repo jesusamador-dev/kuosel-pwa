@@ -46,7 +46,7 @@ const KSLPasswordInput: React.FC<KSLPasswordInputProps> = ({
           value={value}
           placeholder={placeholder}
           onChange={onChange}
-          className="ksl-password-input__field w-full pl-10 pr-10 py-2 border-none rounded-md focus:outline-none"
+          className="ksl-password-input__field w-full pl-7 pr-7 py-1 border-none rounded-md focus:outline-none"
         />
 
         {/* Show/Hide Password Button */}

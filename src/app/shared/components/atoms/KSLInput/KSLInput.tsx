@@ -30,7 +30,7 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
 
         {/* Contenedor del Input */}
         <div
-        className={`ksl-password-input__wrapper relative mt-1 flex items-center rounded-md border ${
+        className={`ksl-password-input__wrapper relative mt-1 flex items-center rounded ${
           error
             ? "border-red-500 focus-within:ring-red-500 focus-within:ring-2"
             : "border-gray-300 focus-within:ring-primary focus-within:ring-2"
@@ -55,7 +55,7 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
             placeholder={placeholder}
             onChange={onChange}
             onBlur={onBlur}
-            className={`w-full py-2 pl-${icon ? "10" : "3"} pr-3 outline-none text-sm text-gray-700 placeholder-gray-400 rounded-md`}
+            className={`w-full py-1 pl-${icon ? "7" : "3"} pr-3 outline-none text-sm text-gray-700 placeholder-gray-400`}
           />
         </div>
 
