@@ -5,7 +5,7 @@ export interface KSLPasswordInputProps {
   label: string;
   value: string;
   placeholder?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error?: string;
 }
 

@@ -12,8 +12,10 @@
   &--primary {
     @apply bg-primary text-white;
 
-    &:hover {
-      @apply bg-white text-primary border border-primary;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-white text-primary border border-primary;
+      }
     }
 
     &:active {
@@ -34,8 +36,10 @@
   &--secondary {
     @apply bg-white text-primary;
 
-    &:hover {
-      @apply bg-whiteA15 text-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-whiteA15 text-white;
+      }
     }
 
     &:active {
@@ -56,8 +60,10 @@
   &--transparent {
     @apply bg-whiteA15 text-white;
 
-    &:hover {
-      @apply text-primary bg-white;
+    @media (hover: hover) {
+      &:hover {
+        @apply text-primary bg-white;
+      }
     }
 
     &:active {
@@ -78,8 +84,10 @@
   &--bordered {
     @apply border border-grayEEE text-grayAAA;
 
-    &:hover {
-      @apply border-grayCCC text-grayCCC;
+    @media (hover: hover) {
+      &:hover {
+        @apply border-grayCCC text-grayCCC;
+      }
     }
 
     &:active {
