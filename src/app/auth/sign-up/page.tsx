@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import SignUpForm from "@/app/auth/components/SignUpForm";
+import SignUpForm from "@/app/auth/shared/components/SignUpForm";
 import KSLButtonWithIcon from "@/app/shared/components/molecules/KSLButtonWithIcon/KSLButtonWithIcon";
 
 const SignUpPage: React.FC = () => {

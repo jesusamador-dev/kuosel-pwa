@@ -1,51 +1,50 @@
 import React, { forwardRef } from "react";
 import KSLIcon from "@/app/shared/components/atoms/KSLIcon/KSLIcon";
 
-export interface KSLInputProps {
-  label: string;
+interface KSLInputProps {
+  label?: string;
   type?: string;
-  value?: string; // `value` será opcional para mayor flexibilidad
+  value?: string;
   placeholder?: string;
   icon?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   error?: string;
-  name: string; // Necesario para trabajar con `react-hook-form`
+  name: string;
+  className?: string;
 }
 
 const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
   (
-    { label, type = "text", value, placeholder, icon, onChange, onBlur, error, name },
+    {
+      label,
+      type = "text",
+      value,
+      placeholder,
+      icon,
+      onChange,
+      onBlur,
+      error,
+      name,
+      className,
+    },
     ref
   ) => {
     return (
-      <div className="flex flex-col space-y-1">
-        {/* Etiqueta */}
-        <label
-          htmlFor={name}
-          className="text-sm font-medium text-gray-700"
-        >
-          {label}
-        </label>
-
-        {/* Contenedor del Input */}
+      <div className={`flex flex-col space-y-1`}>
+        {label && (
+          <label htmlFor={name} className="text-sm font-medium text-gray-700">
+            {label}
+          </label>
+        )}
         <div
-        className={`ksl-password-input__wrapper relative mt-1 flex items-center rounded ${
-          error
-            ? "border-red-500 focus-within:ring-red-500 focus-within:ring-2"
-            : "border-gray-300 focus-within:ring-primary focus-within:ring-2"
-        }`}
-      >
-          {/* Icono */}
+          className={`relative flex items-center rounded-md border ${error ? "border-red-500 focus-within:ring-red-500" : "border-gray-300 focus-within:ring-primary"} focus-within:ring-2`}
+        >
           {icon && (
-            <KSLIcon
-              name={icon}
-              size="1rem"
-              className="text-gray-500 absolute left-3"
-            />
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <KSLIcon name={icon} size="1rem" className="text-gray-500" />
+            </div>
           )}
-          
-          {/* Campo de Entrada */}
           <input
             id={name}
             name={name}
@@ -55,16 +54,11 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
             placeholder={placeholder}
             onChange={onChange}
             onBlur={onBlur}
-            className={`w-full py-1 pl-${icon ? "7" : "3"} pr-3 outline-none text-sm text-gray-700 placeholder-gray-400`}
+            autoComplete="off"
+            className={`w-full py-2 pl-${icon ? "10" : "3"} pr-3 text-sm rounded-md text-gray-700 placeholder-gray-400 bg-white outline-none ${className}`}
           />
         </div>
-
-        {/* Mensaje de Error */}
-        {error && (
-        <p className="ksl-password-input__error text-red-500 text-sm mt-1">
-          {error}
-        </p>
-      )}
+        {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
       </div>
     );
   }
