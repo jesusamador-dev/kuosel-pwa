@@ -68,8 +68,6 @@ const ConfirmOTP: React.FC<ConfirmOTPProps> = ({ onVerify, onResendCode }) => {
       field.onChange(value);
     }
 
-
-
     if (inputEvent.inputType === "deleteContentBackward") {
       console.log("entra")
       const previousInput = formInputs[index - 1];
