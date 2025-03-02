@@ -17,6 +17,7 @@
     "@hookform/resolvers": "^3.9.1",
     "@storybook/addon-links": "^8.4.5",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "axios": "^1.8.1",
     "echarts": "^5.5.1",
     "next": "^15.0.3",
     "raw-loader": "^4.0.2",
