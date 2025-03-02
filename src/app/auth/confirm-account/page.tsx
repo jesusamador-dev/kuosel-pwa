@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ConfirmOTP from "@/app/auth/shared/components/ConfirmOTP"; // Asegúrate de que el path del import es correcto
+import ConfirmOTP from "@/app/auth/shared/components/ConfirmOTP";
 import KSLButton from "@/app/shared/components/atoms/KSLButton/KSLButton";
 
 interface ConfirmAccountProps {

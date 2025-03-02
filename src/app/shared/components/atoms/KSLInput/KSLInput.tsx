@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, ReactNode } from "react";
 import KSLIcon from "@/app/shared/components/atoms/KSLIcon/KSLIcon";
 
 interface KSLInputProps {
@@ -12,6 +12,7 @@ interface KSLInputProps {
   error?: string;
   name: string;
   className?: string;
+  endAdornment?: ReactNode
 }
 
 const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
@@ -27,6 +28,7 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
       error,
       name,
       className,
+      endAdornment
     },
     ref
   ) => {
@@ -38,12 +40,12 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
           </label>
         )}
         <div
-          className={`relative flex items-center rounded-md border ${error ? "border-red-500 focus-within:ring-red-500" : "border-gray-300 focus-within:ring-primary"} focus-within:ring-2`}
+          className={`relative flex items-center rounded-md border 
+            ${error ? "border-red-500 focus-within:ring-red-500" : "border-gray-300 focus-within:ring-primary"} 
+            focus-within:ring-2`}
         >
           {icon && (
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <KSLIcon name={icon} size="1rem" className="text-gray-500" />
-            </div>
+              <KSLIcon name={icon} size="1.2rem" className="mx-2 text-gray-400" />
           )}
           <input
             id={name}
@@ -57,6 +59,11 @@ const KSLInput = forwardRef<HTMLInputElement, KSLInputProps>(
             autoComplete="off"
             className={`w-full py-2 pl-${icon ? "10" : "3"} pr-3 text-sm rounded-md text-gray-700 placeholder-gray-400 bg-white outline-none ${className}`}
           />
+          {endAdornment && (
+            <div className="mx-2 inset-y-0 flex items-center pointer-events-none text-gray-400">
+              {endAdornment}
+            </div>
+          )}
         </div>
         {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
       </div>
