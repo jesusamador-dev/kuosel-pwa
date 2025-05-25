@@ -1,0 +1,6 @@
+{
+    "continue.enableQuickActions": true,
+    "continue.pauseCodebaseIndexOnStart": true,
+    "continue.pauseTabAutocompleteOnBattery": true,
+    "terminal.integrated.env.windows": {}
+}

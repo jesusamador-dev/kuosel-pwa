@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import './globals.scss';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -23,7 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        </body>
     </html>
   );
 }

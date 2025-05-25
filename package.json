@@ -14,15 +14,19 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@storybook/addon-links": "^8.4.5",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "axios": "^1.8.1",
     "echarts": "^5.5.1",
     "next": "^15.0.3",
     "raw-loader": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.2",
     "sass": "^1.81.0",
-    "sass-loader": "^16.0.3"
+    "sass-loader": "^16.0.3",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

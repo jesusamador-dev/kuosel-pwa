@@ -35,7 +35,7 @@ body {
   }
 
   &__icon {
-    @apply text-primary mr-2;
+    @apply mr-2;
   }
 
   &__field {
@@ -64,7 +64,7 @@ body {
   }
 
   &__icon {
-    @apply text-primary mr-2;
+    @apply mr-2;
   }
 
   &__field {
@@ -72,15 +72,14 @@ body {
   }
 
   &__toggle {
-    @apply ml-2 bg-none border-none outline-none cursor-pointer;
+    @apply ml-2 bg-none border-none outline-none cursor-pointer flex;
   }
 
   &__toggle-icon {
-    @apply text-gray-400;
   }
 
   &__error {
-    @apply text-primary text-xs mt-1;
+    @apply text-xs mt-1;
   }
 }
 
