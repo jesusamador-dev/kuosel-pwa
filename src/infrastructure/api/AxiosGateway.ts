@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { HttpApiGateway } from '@/app/shared/infraestructure/interfaces/HttpApiGateway';
+import { HttpApiGateway } from '@/domain/interfaces/HttpApiGateway';
 
 class AxiosGateway implements HttpApiGateway {
   private static instance: AxiosGateway;

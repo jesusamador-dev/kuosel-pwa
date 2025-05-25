@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signUpValidationSchema } from "@/app/auth/shared/schemas/signUpValidationSchema";
-import { SignUpFormModel } from "@/app/auth/shared/models/SignUpFormModel";
+import { SignUpFormModel } from "@/app/auth/shared/interfaces/SignUpFormModel";
 import KSLInput from "@/app/shared/components/atoms/KSLInput/KSLInput";
 import KSLPasswordInput from "@/app/shared/components/atoms/KSLPasswordInput/KSLPasswordInput";
 import KSLButton from "@/app/shared/components/atoms/KSLButton/KSLButton";
